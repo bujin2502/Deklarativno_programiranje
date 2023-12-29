@@ -233,7 +233,7 @@ canvas_frame.pack(side=tk.TOP, padx=20, pady=20)
 widget_frame = tk.Frame(window)
 widget_frame.pack(side=tk.BOTTOM, padx=10, pady=10)
 
-# Stvaranje platna za crtanje unutar canvas frame-a
+# Stvaranje platna za crtanje unutar canvas okvira
 canvas = tk.Canvas(canvas_frame, width=area_width * 80, height=area_height * 80, bg="white")
 canvas.pack()
 
@@ -259,7 +259,7 @@ for city, position in city_positions.items():
     canvas.create_text(x * 80 + 5, y * 80 + 5, text=city)
     canvas.create_text(x * 80 + 5, y * 80 + 20, text=f"Br.st: {cities[city]}")
 
-# Stvaranje widgeta za unos za kapacitet i postotak pokrivenosti unutar widget frame-a
+# Stvaranje widgeta za unos za kapacitet i postotak pokrivenosti unutar widget okvira
 capacity_label = tk.Label(widget_frame, text="Kapacitet:")
 capacity_label.grid(row=0, column=0)
 capacity_entry = tk.Entry(widget_frame, width=10)
