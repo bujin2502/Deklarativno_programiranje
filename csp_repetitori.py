@@ -223,7 +223,7 @@ def recalculate_and_draw():
     # Ispis prvog rješenja ako postoji
     if new_solutions:
         updated_solution = new_solutions[0]
-        messagebox.showinfo("Rješenje", str(updated_solution))
+        messagebox.showinfo("Rješenje", "Pronađeno je rješenje za problem:\n\n{}".format(updated_solution))
     else:
         messagebox.showwarning("Nema rješenja", "Nema rješenja za ovaj problem.")
 
@@ -289,7 +289,7 @@ if solutions:
     first_solution = solutions[0]
     messagebox.showinfo("Rješenje", str(first_solution))
 else:
-    messagebox.showwarning("Nema rješenja", "Nema rješenja za ovaj problem.")
+    messagebox.showinfo("Rješenje", "Pronađeno je rješenje za problem:\n\n{}".format(first_solution))
 
 # Pokretanje glavne petlje događaja
 window.mainloop()
