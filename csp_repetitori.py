@@ -220,6 +220,13 @@ def recalculate_and_draw():
         canvas.create_text(x * 80 + 5, y * 80 + 5, text=city)
         canvas.create_text(x * 80 + 5, y * 80 + 20, text=f"Br.st: {cities[city]}")
 
+    # Ispis prvog rješenja ako postoji
+    if new_solutions:
+        updated_solution = new_solutions[0]
+        messagebox.showinfo("Rješenje", str(updated_solution))
+    else:
+        messagebox.showwarning("Nema rješenja", "Nema rješenja za ovaj problem.")
+
 # Izrada glavnog prozora
 window = tk.Tk()
 window.title("Raspored repetitora")
@@ -276,6 +283,13 @@ coverage_entry.grid(row=0, column=3)
 # Kreiranje gumba za ponovno izračunavanje i crtanje
 recalculate_button = tk.Button(widget_frame, text="Nanovo izračunaj", command=recalculate_and_draw)
 recalculate_button.grid(row=1, sticky=tk.NSEW, columnspan=4, pady=(10, 10))
+
+# Ispis prvog rješenja ako postoji
+if solutions:
+    first_solution = solutions[0]
+    messagebox.showinfo("Rješenje", str(first_solution))
+else:
+    messagebox.showwarning("Nema rješenja", "Nema rješenja za ovaj problem.")
 
 # Pokretanje glavne petlje događaja
 window.mainloop()
