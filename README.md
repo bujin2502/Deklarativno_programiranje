@@ -4,6 +4,7 @@ Za potrebe ovog rada koristi se python-constraint biblioteka pa ukoliko se želi
 
 ```bash
 $ pip install python-constraint
+```
 
 Tkinter je inače sastavni dio python3, ali ukoliko nekim slučajem nije sadržan, instalira se u Terminalu:
 ```bash
